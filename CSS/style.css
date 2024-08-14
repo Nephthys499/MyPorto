@@ -5,8 +5,8 @@
 :root {
   --primary: rgb(255, 255, 255);
   --bg: rgb(18, 18, 18);
-  --second: rgb(101, 204, 184);
-  --content-bg: rgb(30, 30, 30); /* Warna latar belakang konten */
+  --second: rgb(255, 1, 79);
+  --content-bg: rgb(33, 36, 40); /* Warna latar belakang konten */
   --secondary-text: rgb(176, 176, 176); /* Warna teks sekunder */
   --background-color-1: linear-gradient(145deg, #1e2024, #23272b);
   --shadow-1: 10px 10px 19px #1c1e22, -10px -10px 19px #262a2e;
@@ -31,7 +31,7 @@ html {
   font-family: Arial, sans-serif;
   overflow-x: hidden;
   overflow-y: auto;
-  background-color: var(--primary);
+  background-color: var(--content-bg);
 }
 
 /************************ Halaman awal ***********************/
@@ -43,12 +43,12 @@ html {
   align-items: center;
   height: 100vh;
   width: 100%;
-  position: absolute; /* Menggunakan absolute positioning */
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 999;
   transition: all 1s ease-out;
-  opacity: 1; /* Menjaga visibilitas selama transisi */
+  opacity: 1;
 }
 
 #intro.hidden {
@@ -66,12 +66,7 @@ html {
 }
 
 #intro .foto {
-  background-color: rgba(
-    206,
-    201,
-    201,
-    0.947
-  ); /* Abu-abu gelap semi transparan */
+  background-color: rgba(206, 201, 201, 0.947);
   width: 7rem;
   position: absolute;
   height: 7rem;
@@ -99,23 +94,23 @@ html {
 
 #main-content {
   display: none;
-  opacity: 0; /* Mulai dengan transparansi 0 */
-  transition: opacity 1s ease; /* Transisi halus */
+  opacity: 0;
+  transition: opacity 1s ease;
 }
 
 #main-content.show {
   display: block;
-  opacity: 1; /* Mengatur visibilitas menjadi 1 */
+  opacity: 1;
 }
 
 @media (max-width: 1024px) {
   #intro h1 {
-    font-size: 8rem; /* Resize font */
-    width: 60vw; /* Adjust width */
+    font-size: 8rem;
+    width: 60vw;
   }
 
   #intro .foto {
-    width: 6rem; /* Resize photo */
+    width: 6rem;
     height: 6rem;
   }
 }
@@ -123,25 +118,24 @@ html {
 /* Responsiveness for small screens (mobile devices) */
 @media (max-width: 768px) {
   #intro h1 {
-    font-size: 6rem; /* Resize font */
-    width: 70vw; /* Adjust width */
+    font-size: 6rem;
+    width: 70vw;
   }
 
   #intro .foto {
-    width: 5rem; /* Resize photo */
+    width: 5rem;
     height: 5rem;
   }
 }
 
-/* Responsiveness for extra small screens (very small mobile devices) */
 @media (max-width: 480px) {
   #intro h1 {
-    font-size: 4rem; /* Resize font */
-    width: 80vw; /* Adjust width */
+    font-size: 4rem;
+    width: 80vw;
   }
 
   #intro .foto {
-    width: 4rem; /* Resize photo */
+    width: 4rem;
     height: 4rem;
   }
 }
@@ -163,9 +157,7 @@ header {
   /* box-shadow: 0 4px 15px rgba(255, 255, 255, 0.4);  */
 }
 .navbar-scrolled {
-  backdrop-filter: blur(
-    10px
-  ); /* Efek blur */ /* Warna navbar setelah di-scroll */
+  backdrop-filter: blur(10px);
   transition: background-color 0.3s ease;
 }
 .logo {
@@ -182,6 +174,10 @@ header {
   display: flex;
   justify-content: space-around;
   padding-right: 4rem;
+}
+.navbar-toggle {
+  display: none;
+  cursor: pointer;
 }
 .navbar .nav-item {
   color: #ffffff;
@@ -211,21 +207,19 @@ header {
   width: 100%;
   height: 100vh;
   background-color: rgb(33, 36, 40);
-  background-size: cover; /* Menutup seluruh area dengan background */
-  background-repeat: no-repeat; /* Mencegah pengulangan background */
-  background-position: center; /* Posisi background di tengah */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .home,
-.home2 {
+.portofolio {
   padding: 5rem 3% 1rem;
 }
-.home2 {
-  display: flex;
-  justify-content: space-between;
+.portofolio {
   width: 100%;
   height: 100vh;
 }
-.home2 p {
+.portofolio p {
   font-size: 1.2rem;
   line-height: 1.6;
   color: var(--secondary-text);
@@ -254,17 +248,17 @@ header {
   height: 51vh;
   width: 30vw;
   left: 5.5rem;
-  bottom: 95px; /* Menggeser kotak ke atas */
+  bottom: 95px;
   position: absolute;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3),
-    /* Bayangan utama untuk efek 3D */ 0 0 30px 15px rgba(255, 255, 255, 0.5); /* Cahaya di balik kotak */
+    0 0 30px 15px rgba(255, 255, 255, 0.5);
   background-color: white;
 }
 
 .right-content h1 span {
   font-size: 3rem;
   margin-bottom: 1rem;
-  color: #ff014f;
+  color: rgb(255, 1, 79);
   text-shadow: none;
 }
 .right-content h1 {
@@ -273,7 +267,7 @@ header {
   font-weight: 500;
   margin-bottom: 1rem;
   color: var(--primary);
-  text-shadow: 0 0 10px var(--primary); /* Efek teks menyala */
+  text-shadow: 0 0 10px var(--primary);
 }
 .right-content h2 {
   font-size: small;
@@ -284,14 +278,14 @@ header {
 .right-content p {
   font-size: 1.2rem;
   line-height: 1.6;
-  color: var(--secondary-text); /* Menggunakan warna teks sekunder */
+  color: var(--secondary-text);
 }
 .right-content .container {
   width: auto;
   display: flex;
   height: auto;
 }
-.right-content .title {
+/* .right-content .title {
   width: auto;
   display: flex;
   height: auto;
@@ -307,18 +301,29 @@ header {
   flex: 1;
   text-transform: uppercase;
   color: var(--secondary-text);
-}
+} */
 .right-content .container .social {
   display: flex;
   flex: 1;
+  flex-direction: column;
   gap: 20px;
+}
+.right-content .container .social span {
+  text-transform: uppercase;
+  color: var(--secondary-text);
+}
+.right-content .container .media span {
+  text-transform: uppercase;
+  color: var(--secondary-text);
 }
 .right-content .container .media {
   display: flex;
   flex: 1;
   gap: 20px;
+  flex-direction: column;
   align-items: center;
 }
+
 .right-content .container .social .border,
 .right-content .container .media .border {
   display: inline-block;
@@ -341,6 +346,164 @@ header {
   background: linear-gradient(145deg, #23272b, #1e2024);
   transform: translateY(-10px);
   box-shadow: var(--hover-shadow);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .logo {
+    padding-left: 2rem;
+  }
+
+  .navbar {
+    padding-right: 2rem;
+  }
+
+  .home {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .left-content img {
+    width: 60%;
+    margin-bottom: 2rem;
+  }
+
+  .right-content {
+    padding: 1.5rem;
+  }
+
+  .right-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .right-content p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile Styles (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  header {
+    display: flex;
+    justify-content: flex-end;
+    height: auto;
+    padding: 1rem 0;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .navbar {
+    display: none;
+    flex-direction: column;
+    background-color: rgb(33, 36, 40);
+    position: absolute;
+    top: 64px;
+    right: 0;
+    width: 100%;
+    padding: 1rem 0;
+  }
+  .left-content .borderImg {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: block;
+    color: var(--second);
+    font-size: 1.5rem;
+    padding-right: 1rem;
+  }
+
+  .navbar.active {
+    display: flex;
+  }
+
+  .navbar .nav-item {
+    margin: 10px 0;
+    padding-left: 1rem;
+    text-align: center;
+  }
+
+  .home {
+    padding: 2rem 1rem;
+    height: auto;
+  }
+
+  .left-content img {
+    width: 80%;
+  }
+
+  .right-content h1 {
+    font-size: 2rem;
+  }
+
+  .right-content p {
+    font-size: 1rem;
+  }
+
+  .right-content .container,
+  .right-content .title {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .right-content .container .social .border,
+  .right-content .container .media .border {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 12px;
+  }
 }
 
 /************************ Finish Home Page ***********************/
+
+/************************ Start Portofolio Page ***********************/
+.portofolio .header-center {
+  height: 1px;
+  background: #dddddd;
+  border-bottom: #ffffff solid 1px;
+  margin-bottom: 3.2rem;
+  position: relative;
+  width: 80%;
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+.portofolio .header-center h3 {
+  background: var(--content-bg);
+  position: absolute;
+  top: -0.8rem;
+  left: 50%;
+  margin-left: -160px;
+  width: 320px;
+  text-align: center;
+  display: block;
+  color: var(--second);
+  text-transform: uppercase;
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-weight: normal;
+  letter-spacing: 0.2rem;
+  padding: 0 !important;
+  font-family: "proxima nova semibold", "Helvetica Neue", Helvetica, Arial,
+    Sans-serif;
+}
+.portofolio .container-card .card {
+  text-align: left;
+  padding: 30px;
+  position: relative;
+  border-radius: 20px;
+  background: var(--background-color-1);
+  box-shadow: var(--shadow-1);
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  transition: 0.5s all ease-in-out;
+  display: inline-block;
+}
+
+/************************ Finish Portofolio Page ***********************/
