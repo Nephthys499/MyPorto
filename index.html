@@ -10,6 +10,10 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet" />
+    <!-- AOS CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+      rel="stylesheet" />
   </head>
   <body>
     <div id="intro">
@@ -38,8 +42,7 @@
     </div>
     <section class="home" id="home">
       <div class="left-content">
-        <img src="assets/SATYA -IG3.png" alt="" />
-        <div class="borderImg"></div>
+        <div class="borderImg"><img src="assets/home3.png" alt="" /></div>
       </div>
       <div class="right-content">
         <h2>Welcome To My World</h2>
@@ -99,19 +102,47 @@
         <h3>My Portofolio</h3>
       </div>
       <div class="container-card">
-        <div class="card">
+        <div class="card" data-aos="fade-right">
           <div class="photo-card">
-            <video
-              src="https://youtu.be/Obim8BYGnOE?si=wJShzOalYcDDaDNc"></video>
+            <img src="assets/TA2.png" alt="" />
           </div>
           <h3>Development</h3>
-          <h2>E-learning With gamifikation using Reac.js</h2>
+          <h2>E-learning With gamifikation</h2>
+          <h4>React.js</h4>
+        </div>
+        <div class="card" data-aos="fade-left">
+          <div class="photo-card">
+            <img src="assets/TA2.png" alt="" />
+          </div>
+          <h3>Development</h3>
+          <h2>menu for diabetes</h2>
+          <h4>React.js</h4>
+        </div>
+        <div class="card" data-aos="fade-right">
+          <div class="photo-card">
+            <img src="assets/TA2.png" alt="" />
+          </div>
+          <h3>Development</h3>
+          <h2>E-learning With gamifikation</h2>
+          <h4>React.js</h4>
+        </div>
+        <div class="card" data-aos="fade-left">
+          <div class="photo-card">
+            <img src="assets/TA2.png" alt="" />
+          </div>
+          <h3>Design</h3>
+          <h2>Sistem manajemen puskesmas</h2>
+          <h4>Figma</h4>
         </div>
       </div>
     </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="/Javascript/script.js"></script>
     <script
       src="https://kit.fontawesome.com/6deee56153.js"
       crossorigin="anonymous"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
